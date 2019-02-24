@@ -2,4 +2,10 @@
 
 2.sudo apt-get install -y nodejs
 
-3.npm install -g ganache-cli
+3.npm install -g ganache-cli 
+
+#node installation 
+$ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+
+# Install Node.js from the Debian-based distributions repository
+$ sudo apt-get install -y nodejs
