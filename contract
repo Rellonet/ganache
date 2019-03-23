@@ -1,0 +1,29 @@
+pragma solidity ^0.5.0;
+
+contract sample
+{
+	struct user {
+        string fname;
+        string lname;
+        string email;
+        string pass;
+        uint256 phnumber;
+        
+      
+    }
+
+    
+    mapping(uint256 => user) m_user;
+        //candidate_list [] public m_candidate_list;
+    
+    function newUser (string memory _fname, string memory _lname,string memory _email,string memory _pass, uint256 _phnumber) public {
+        m_user[_phnumber] = user(_fname,_lname,_email,_pass,_phnumber);
+    }
+    
+    function getUser(uint256 _phnumber) public view returns(string memory,string memory,string memory,string memory) {
+        return (m_user[_phnumber].fname,m_user[_phnumber].lname,m_user[_phnumber].email, m_user[_phnumber].pass);
+    }
+    
+    
+}
+
